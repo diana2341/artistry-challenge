@@ -1,0 +1,10 @@
+<h1>Artist</h1>
+<strong>Name:</strong><%=@artist.name%><br>
+<strong>Age: </strong><%=@artist.age%><br>
+<strong> Title:</strong><%=@artist.title%><br>
+
+<strong> Instrument:</strong><% @artist.instruments.each do |instrument|%>
+    <%= instrument.name %>,
+    <%end%>
+    <hr>
+    <strong><%= link_to "add instrument", new_artist_instrument_path%><strong
